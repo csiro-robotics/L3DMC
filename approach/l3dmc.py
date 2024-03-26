@@ -133,7 +133,7 @@ class Appr(Inc_Learning_Appr):
 
     def _get_optimizer(self):
         """Returns the optimizer"""
-        return torch.optim.SGD(chain(self.model.parameters(), self.mcd_criterion.embed_s_e.parameters(), self.mcd_criterion.embed_t_e.parameters(), self.mcd_criterion.embed_s_h.parameters(), self.mcd_criterion.embed_t_h.parameters(), self.mcd_criterion.tp_s.parameters(), self.mcd_criterion.tp_t.parameters()), lr=self.lr, weight_decay=self.wd, momentum=self.momentum)
+        return torch.optim.SGD(chain(self.model.parameters(), self.mcd_criterion.embed_s_e.parameters(), self.mcd_criterion.embed_t_e.parameters(), self.mcd_criterion.embed_s_h.parameters(), self.mcd_criterion.embed_t_h.parameters()), lr=self.lr, weight_decay=self.wd, momentum=self.momentum)
 
 
     def post_train_process(self, t, trn_loader):
