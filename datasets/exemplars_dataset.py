@@ -22,7 +22,7 @@ class ExemplarsDataset(MemoryDataset):
     def extra_parser(args):
         parser = ArgumentParser("Exemplars Management Parameters")
         _group = parser.add_mutually_exclusive_group()
-        _group.add_argument('--num-exemplars', default=0, type=int, required=False,
+        _group.add_argument('--num-exemplars', default=500, type=int, required=True,
                             help='Fixed memory, total number of exemplars (default=%(default)s)')
         _group.add_argument('--num-exemplars-per-class', default=0, type=int, required=False,
                             help='Growing memory, number of exemplars per class (default=%(default)s)')

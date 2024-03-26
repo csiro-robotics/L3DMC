@@ -1,6 +1,6 @@
 from os.path import join
 
-_BASE_DATA_PATH = "DATA_DIR"
+_BASE_DATA_PATH = "DATA_DIR/"
 _MEDIMNIST_DATA_PATH = _BASE_DATA_PATH + "medimnist/"
 
 dataset_config = {

@@ -134,7 +134,7 @@ def get_datasets(dataset, path, num_tasks, nc_first_task, validation, trn_transf
     elif 'bloodmnist' in dataset:
         from medmnist import BloodMNIST
         
-        tvmnist_trn = BloodMNIST(root=path, split="train", download=False, as_rgb=True)
+        tvmnist_trn = BloodMNIST(root=path, split="train", download=True, as_rgb=True)
         tvmnist_tst = BloodMNIST(root=path, split="test", download=False, as_rgb=True)
         trn_data = {'x': tvmnist_trn.imgs, 'y': tvmnist_trn.labels.tolist()}
         tst_data = {'x': tvmnist_tst.imgs, 'y': tvmnist_tst.labels.tolist()}
