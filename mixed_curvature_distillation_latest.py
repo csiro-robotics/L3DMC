@@ -41,7 +41,7 @@ class MCD(nn.Module):
 
 	def forward(self, feat_s_, feat_t_, weight_e=.5, weight_h=.5):
 		feat_s = feat_s_ + torch.zeros_like(feat_s_).normal_(0, 0.0001)
-		feat_t = feat_t_ + torch.zeros_like(feat_t_).normal_(0, 0.0001)
+		feat_t = feat_t_ #+ torch.zeros_like(feat_t_).normal_(0, 0.0001)
 		
 		# Euclidean Space
 
@@ -53,7 +53,6 @@ class MCD(nn.Module):
 		# loss_e = self.criterion_e(feat_s, feat_t)
 		# With Projection
 		loss_e = self.criterion_e(feat_s_e, feat_t_e)
-
 
 		# Hyperbolic Space
 
