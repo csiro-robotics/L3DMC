@@ -52,10 +52,12 @@ and specific options for each of the code parts:
 * `--approach`: learning approach used (default='l3dmc') 
 * `--datasets`: dataset or datasets used (default=['bloodmnist'])
 * `--network`: network architecture used (default='resnet32')
-* `--log`: loggers used (default='disk')
+<!-- * `--log`: loggers used (default='disk') -->
 
 * `--alpha`: Weight for KD loss
 * `--beta`: Weight for Mixed Curvature Feature Distillation loss
+* `--num-exemplars`: Fixed memory, total number of exemplars
+
 
 # Acknowledgement
 We would like to acknowledge the authors of [LifeLonger: A Benchmark for Continual Disease Classification](https://github.com/mmderakhshani/LifeLonger) for their excellent codebase which has been used as a starting point for this project.
